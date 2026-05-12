@@ -49,7 +49,7 @@ class Settings(BaseSettings):
 
     # ChromaDB
     CHROMA_HOST: str = Field(default="localhost")
-    CHROMA_PORT: int = Field(default=8002)
+    CHROMA_PORT: int = Field(default=8012)
 
     # NexusRAG Pipeline
     NEXUSRAG_ENABLED: bool = True

@@ -23,7 +23,7 @@ services:
     image: chromadb/chroma:latest
     container_name: nexusrag-chromadb-wsl
     ports:
-      - "8002:8000"
+      - "8012:8000"
     volumes:
       - nexusrag_chroma_data:/chroma/chroma
     environment:
