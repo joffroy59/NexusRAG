@@ -13,7 +13,7 @@ services:
     ports:
       - "5443:5432"
     volumes:
-      - nexusrag_postgres_data:/var/lib/postgresql/data
+      - nexusrag_postgres_data_wsl:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
@@ -26,7 +26,7 @@ services:
     ports:
       - "8012:8000"
     volumes:
-      - nexusrag_chroma_data:/chroma/chroma
+      - nexusrag_chroma_data_wsl:/chroma/chroma
     environment:
       - IS_PERSISTENT=TRUE
       - ANONYMIZED_TELEMETRY=FALSE
@@ -92,7 +92,7 @@ services:
     restart: unless-stopped
 
 volumes:
-  nexusrag_postgres_data:
-  nexusrag_chroma_data:
+  nexusrag_postgres_data_wsl:
+  nexusrag_chroma_data_wsl:
   nexusrag_uploads:
   nexusrag_data:
