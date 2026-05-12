@@ -4,7 +4,7 @@
 services:
   postgres:
     image: postgres:15-alpine
-    container_name: nexusrag-postgres
+    container_name: nexusrag-postgres-wsl
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -21,7 +21,7 @@ services:
 
   chromadb:
     image: chromadb/chroma:latest
-    container_name: nexusrag-chromadb
+    container_name: nexusrag-chromadb-wsl
     ports:
       - "8002:8000"
     volumes:

@@ -1,10 +1,11 @@
 # NexusRAG — Full Stack (Production)
 # Usage: cp .env.example .env && docker compose up -d
 
+name: nexusrag_wsl
 services:
   postgres:
     image: postgres:15-alpine
-    container_name: nexusrag-postgres
+    container_name: nexusrag-postgres-wsl
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -21,7 +22,7 @@ services:
 
   chromadb:
     image: chromadb/chroma:latest
-    container_name: nexusrag-chromadb
+    container_name: nexusrag-chromadb-wsl
     ports:
       - "8002:8000"
     volumes:
@@ -34,7 +35,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.backend
-    container_name: nexusrag-backend
+    container_name: nexusrag-backend-wsl
     depends_on:
       postgres:
         condition: service_healthy
@@ -66,7 +67,7 @@ services:
     build:
       context: ./mcp-server
       dockerfile: Dockerfile
-    container_name: nexusrag-mcp-server
+    container_name: nexusrag-mcp-server-wsl
     depends_on:
       backend:
         condition: service_healthy
@@ -82,7 +83,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.frontend
-    container_name: nexusrag-frontend
+    container_name: nexusrag-frontend-wsl
     depends_on:
       backend:
         condition: service_healthy
