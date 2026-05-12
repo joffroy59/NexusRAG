@@ -111,7 +111,7 @@ if [ "$HAS_DOCKER" = true ]; then
         sleep 1
     done
 else
-    echo "  Skipped (no Docker). Ensure PostgreSQL (port 5433) and ChromaDB (port 8002) are running."
+    echo "  Skipped (no Docker). Ensure PostgreSQL (port 5443) and ChromaDB (port 8002) are running."
 fi
 
 # -----------------------------------------------------------
