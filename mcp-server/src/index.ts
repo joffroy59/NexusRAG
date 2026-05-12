@@ -8,7 +8,7 @@ import { z } from "zod";
 import axios from "axios";
 
 // Constants
-const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:8080/api/v1";
+const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:8090/api/v1";
 
 // Server Setup
 const server = new McpServer({

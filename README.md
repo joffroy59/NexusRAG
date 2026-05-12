@@ -32,7 +32,7 @@ NexusRAG combines vector search, knowledge graph, and cross-encoder reranking in
 ## Showcase
 
 <div align="center">
- 
+
 https://github.com/user-attachments/assets/fa845fab-dcc3-4a64-86ac-6dda2c073156
 
 </div>
@@ -456,7 +456,7 @@ cd NexusRAG
 The script checks prerequisites, creates venv, installs deps, starts PostgreSQL + ChromaDB, and optionally downloads ML models.
 
 ```bash
-# Terminal 1 — Backend (port 8080)
+# Terminal 1 — Backend (port 8090)
 ./run_bk.sh
 
 # Terminal 2 — Frontend (port 5174)
@@ -561,7 +561,7 @@ You can directly add the NexusRAG MCP server to Cursor or Claude as an SSE conne
 ## API
 
 
-All endpoints prefixed with `/api/v1`. Interactive docs at http://localhost:8080/docs
+All endpoints prefixed with `/api/v1`. Interactive docs at http://localhost:8090/docs
 
 <details>
 <summary><b>Workspaces</b></summary>

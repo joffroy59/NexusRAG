@@ -1,5 +1,5 @@
 #!/bin/bash
-# NexusRAG Backend — start FastAPI server (port 8080)
+# NexusRAG Backend — start FastAPI server (port 8090)
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -14,5 +14,5 @@ else
     exit 1
 fi
 
-echo "Starting NexusRAG backend on port 8080..."
-uvicorn app.main:app --reload --port 8080
+echo "Starting NexusRAG backend on port 8090..."
+uvicorn app.main:app --reload --port 8090
