@@ -163,7 +163,7 @@ async function main() {
 
   if (transportType === "http") {
     const app = createMcpExpressApp();
-    const port = process.env.PORT || 8000;
+    const port = process.env.PORT || 8010;
 
     // Store active transports
     const transports: Record<string, StreamableHTTPServerTransport> = {};

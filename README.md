@@ -549,11 +549,11 @@ NexusRAG includes a [Model Context Protocol (MCP)](https://modelcontextprotocol.
 
 ### Connecting to the MCP Server
 
-The MCP Server is automatically started by default via `docker-compose up -d` on port `8000` using the Streamable HTTP transport (latest protocol version).
+The MCP Server is automatically started by default via `docker-compose up -d` on port `8010` using the Streamable HTTP transport (latest protocol version).
 
 #### Cursor / Claude Desktop
 You can directly add the NexusRAG MCP server to Cursor or Claude as an SSE connection using the URL:
-`http://localhost:8000/mcp`
+`http://localhost:8010/mcp`
 *(Note: some clients still label this as an SSE connection, but use the `/mcp` endpoint to connect via Streamable HTTP).*
 
 ---
